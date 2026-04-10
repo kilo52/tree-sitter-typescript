@@ -44,7 +44,7 @@ macro(add_parser name)
                           SOVERSION "${TREE_SITTER_ABI_VERSION}.${PROJECT_VERSION_MAJOR}"
                           DEFINE_SYMBOL "")
 
-    configure_file("${CMAKE_SOURCE_DIR}/bindings/c/tree-sitter-${name}.pc.in"
+    configure_file("bindings/c/tree-sitter-${name}.pc.in"
                    "${CMAKE_CURRENT_BINARY_DIR}/tree-sitter-${name}.pc" @ONLY)
 
     install(FILES "${CMAKE_SOURCE_DIR}/bindings/c/tree-sitter-${name}.h"
